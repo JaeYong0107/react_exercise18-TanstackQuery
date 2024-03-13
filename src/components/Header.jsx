@@ -1,4 +1,5 @@
 import { useIsFetching } from "@tanstack/react-query";
+import { Link } from "react-router-dom";
 
 export default function Header({ children }) {
   const fetching = useIsFetching();
@@ -9,7 +10,7 @@ export default function Header({ children }) {
       </div>
       <header id="main-header">
         <div id="header-title">
-          <h1>React Events</h1>
+          <Link to='/' className="h1">React Events</Link>
         </div>
         <nav>{children}</nav>
       </header>
